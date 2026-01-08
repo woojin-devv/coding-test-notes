@@ -12,3 +12,8 @@
 - [4673-셀프넘버](01_implementation/boj_4673.ipynb)
 - [25206-너의 평점은](01_implementation/boj_25206.ipynb)
 - [4659-비밀번호 발음하기](01_implementation/boj_4659.ipynb)
+
+### Data Structure
+
+- **스택**
+  - [10773-제로](05_data_structure/boj_10773.ipynb)
