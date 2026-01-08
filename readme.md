@@ -1,5 +1,12 @@
-## 문제 
+## 문제
+
+### math
+
+- [1929-소수](04_math/boj_1929.ipynb)
+  - 에라토스테네스의 체
+
 ### implementation
+
 - [1010-다리 놓기](01_implementation/boj_1010.ipynb)
 - [1012-유기농배추](01_implementation/boj_1012.ipynb)
 - [4673-셀프넘버](01_implementation/boj_4673.ipynb)
