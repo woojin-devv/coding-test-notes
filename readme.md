@@ -17,3 +17,8 @@
 
 - **스택**
   - [10773-제로](05_data_structure/boj_10773.ipynb)
+
+- **정렬**
+  - [1427-소트인사이드](02_sorting/boj_1427.ipynb)
+  - [11650-좌표 정렬하기](02_sorting/boj_11650.ipynb)
+  - [11651-좌표 정렬하기2](02_sorting/boj_11651.ipynb)
