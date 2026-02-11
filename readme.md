@@ -17,6 +17,7 @@
 
 - **스택**
   - [10773-제로](05_data_structure/boj_10773.ipynb)
+  - [9012-괄호](05_data_structure/boj_9012.ipynb)
 
 - **정렬**
   - [1427-소트인사이드](02_sorting/boj_1427.ipynb)
