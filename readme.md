@@ -36,3 +36,4 @@
   - [11651-좌표 정렬하기2](02_sorting/boj_11651.ipynb)
   - [10814-나이순정렬](02_sorting/boj_10814.ipynb)
   - [1049-기타줄](01_implementation/boj_1049.ipynb)
+  - [11047-동전 0](02_sorting/boj_11047.ipynb)
