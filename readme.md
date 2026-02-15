@@ -27,6 +27,9 @@
   - [1927-최소 힙](05_data_structure/boj_1927.ipynb)
   - [11279-최대 힙](05_data_structure/boj_11279.ipynb)
 
+- **해시**
+  - [1302-베스트셀러](05_data_structure/boj_1302.ipynb)
+
 - **정렬**
   - [1427-소트인사이드](02_sorting/boj_1427.ipynb)
   - [11650-좌표 정렬하기](02_sorting/boj_11650.ipynb)
