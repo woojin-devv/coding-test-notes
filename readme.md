@@ -34,3 +34,4 @@
   - [1427-소트인사이드](02_sorting/boj_1427.ipynb)
   - [11650-좌표 정렬하기](02_sorting/boj_11650.ipynb)
   - [11651-좌표 정렬하기2](02_sorting/boj_11651.ipynb)
+  - [10814-나이순정렬](02_sorting/boj_10814.ipynb)
