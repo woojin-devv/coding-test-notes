@@ -23,6 +23,7 @@
   - [2164-카드2](05_data_structure/boj_2164.ipynb)
   - [11286-절댓값 힙](05_data_structure/boj_11286.ipynb)
   - [1927-최소 힙](05_data_structure/boj_1927.ipynb)
+  - [11279-최대 힙](05_data_structure/boj_11279.ipynb)
 
 - **정렬**
   - [1427-소트인사이드](02_sorting/boj_1427.ipynb)
