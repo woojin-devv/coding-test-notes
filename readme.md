@@ -26,9 +26,11 @@
   - [11286-절댓값 힙](05_data_structure/boj_11286.ipynb)
   - [1927-최소 힙](05_data_structure/boj_1927.ipynb)
   - [11279-최대 힙](05_data_structure/boj_11279.ipynb)
+  - [10845-큐](05_data_structure/boj_10845.ipynb)
 
 - **해시**
   - [1302-베스트셀러](05_data_structure/boj_1302.ipynb)
+  - [10816-숫자 카드 2](05_data_structure/boj_10816.ipynb)
 
 - **정렬**
   - [1427-소트인사이드](02_sorting/boj_1427.ipynb)
