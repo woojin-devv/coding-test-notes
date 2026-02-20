@@ -46,3 +46,6 @@
 ### 완전 탐색
 - [2309-일곱난쟁이](06_brute-force/boj_2309.ipynb)
 - [2798-블랙잭](06_brute-force/boj_2798.ipynb)
+
+### Greedy
+- [1449-수리공 항승](07_greedy/boj_1449.ipynb)
