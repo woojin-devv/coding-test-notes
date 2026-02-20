@@ -49,3 +49,4 @@
 
 ### Greedy
 - [1449-수리공 항승](07_greedy/boj_1449.ipynb)
+- [2217-로프](07_greedy/boj_2217.ipynb)
