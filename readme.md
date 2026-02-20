@@ -41,3 +41,7 @@
   - [10814-나이순정렬](02_sorting/boj_10814.ipynb)
   - [1049-기타줄](01_implementation/boj_1049.ipynb)
   - [11047-동전 0](02_sorting/boj_11047.ipynb)
+
+
+### 완전 탐색
+- [2309-일곱난쟁이](06_brute-force/boj_2309.ipynb)
