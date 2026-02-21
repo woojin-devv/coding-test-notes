@@ -16,6 +16,7 @@
 - [4659-비밀번호 발음하기](01_implementation/boj_4659.ipynb)
 - [11659-구간합 구하기](01_implementation/boj_11659.ipynb)
 - [1182-부분수열의 합](01_implementation/boj_1182.ipynb)
+- [1313-소수](04_math/boj_1313.ipynb)
 
 ### Data Structure
 
