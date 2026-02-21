@@ -25,3 +25,16 @@ for i in numbers:
     temp = temp + i
     prefix_sum.append(temp)
 ```
+
+## 1. Counter 클래스 
+> Counter는 Python의 Colletions 모듈에 포함된 클래스 중 하나.
+> - 반복 가능한(iterable) 객체의 요소 개수를 손쉽게 셀 수 있도록 설계 됨. 
+> - 기본적인 딕셔너리 형태로 동작 
+> - 각 요소를 key, value로 저장
+
+```python 
+from collections import Counter
+
+fruits = []
+
+```
