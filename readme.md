@@ -43,11 +43,15 @@
   - [1049-기타줄](01_implementation/boj_1049.ipynb)
   - [11047-동전 0](02_sorting/boj_11047.ipynb)
 
-
-### 완전 탐색
-- [2309-일곱난쟁이](06_brute-force/boj_2309.ipynb)
-- [2798-블랙잭](06_brute-force/boj_2798.ipynb)
-
 ### Greedy
 - [1449-수리공 항승](07_greedy/boj_1449.ipynb)
 - [2217-로프](07_greedy/boj_2217.ipynb)
+
+
+# 탐색
+## 완전 탐색
+- [2309-일곱난쟁이](06_brute-force/boj_2309.ipynb)
+- [2798-블랙잭](06_brute-force/boj_2798.ipynb)
+
+## DFS
+- [11724-연결 요소의 개수](03_bfs_dfs/boj_11724.ipynb)
