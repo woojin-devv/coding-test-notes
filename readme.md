@@ -15,6 +15,7 @@
 - [25206-너의 평점은](01_implementation/boj_25206.ipynb)
 - [4659-비밀번호 발음하기](01_implementation/boj_4659.ipynb)
 - [11659-구간합 구하기](01_implementation/boj_11659.ipynb)
+- [1182-부분수열의 합](01_implementation/boj_1182.ipynb)
 
 ### Data Structure
 
