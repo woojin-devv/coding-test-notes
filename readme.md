@@ -23,6 +23,7 @@
 
 - **투포인터**
   - [1337-올바른배열](01_implementation/boj_1337.ipynb)
+  - [1940-주몽](01_implementation/boj_1940.ipynb)
 
 ### Data Structure
 
