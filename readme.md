@@ -4,6 +4,7 @@
 
 - [1929-소수](04_math/boj_1929.ipynb)
   - 에라토스테네스의 체
+- [9655-돌게임](04_math/boj_9655.ipynb)
 
 ### implementation
 
@@ -18,6 +19,7 @@
 - [11660-구간합 구하기5]()
 - [1182-부분수열의 합](01_implementation/boj_1182.ipynb)
 - [1313-소수](04_math/boj_1313.ipynb)
+- [2161-카드1](01_implementation/boj_2161.ipynb)
 
 ### Data Structure
 
