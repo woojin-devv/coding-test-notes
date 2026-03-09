@@ -101,3 +101,7 @@
 - [1260 - DFS와 BFS](03_graph/boj_1260.ipynb)
 
 ---
+
+## Binary Serach
+
+- [2805-나무자르기](05_data_structure/binary_search/boj_2805.ipynb)
