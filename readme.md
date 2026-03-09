@@ -21,6 +21,9 @@
 - [1313-소수](04_math/boj_1313.ipynb)
 - [2161-카드1](01_implementation/boj_2161.ipynb)
 
+- **투포인터**
+  - [1337-올바른배열](01_implementation/boj_1337.ipynb)
+
 ### Data Structure
 
 - **스택**
