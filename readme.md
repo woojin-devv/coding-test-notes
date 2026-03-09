@@ -42,6 +42,7 @@
   - [28279-덱2](05_data_structure/boj_28279.ipynb)
 - **해시**
   - [1302-베스트셀러](05_data_structure/boj_1302.ipynb)
+  - [10815-숫자 카드](01_implementation/boj_10815.ipynb)
   - [10816-숫자 카드 2](05_data_structure/boj_10816.ipynb)
 
 - **정렬**
