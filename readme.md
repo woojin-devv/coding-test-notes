@@ -30,6 +30,10 @@
 - [2161 - 카드1](01_implementation/boj_2161.ipynb)
 - [1049 - 기타줄](01_implementation/boj_1049.ipynb)
 
+### 2D Array
+
+- [2563 – 색종이](05_data_structure/boj_2563.ipynb)
+
 ---
 
 ## 3. Two Pointer
