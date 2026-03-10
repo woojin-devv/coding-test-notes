@@ -33,6 +33,7 @@
 ### 2D Array
 
 - [2563 – 색종이](05_data_structure/boj_2563.ipynb)
+- [2578 – 빙고](01_implementation/boj_2578.ipynb)
 
 ---
 
