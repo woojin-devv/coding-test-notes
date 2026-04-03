@@ -29,6 +29,8 @@
 - [1182 - 부분수열의 합](01_implementation/boj_1182.ipynb)
 - [2161 - 카드1](01_implementation/boj_2161.ipynb)
 - [1049 - 기타줄](01_implementation/boj_1049.ipynb)
+- [2941 - 크로아티아 알파벳](01_implementation/boj_2941.ipynb)
+- [7586 - 덩치](01_implementation/boj_7586.ipynb)
 
 ### 2D Array
 
@@ -112,3 +114,10 @@
 ## Binary Serach
 
 - [2805-나무자르기](05_data_structure/binary_search/boj_2805.ipynb)
+
+--
+
+## simulation
+
+- [10709 – 기상캐스터](08_simulation/boj_10709.ipynb)
+- [14530 - 로봇청소기](08_simulation/boj_14530.ipynb)
