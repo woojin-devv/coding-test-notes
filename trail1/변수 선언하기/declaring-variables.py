@@ -1,4 +1,3 @@
 a = 3
 b = "C"
-print(a)
-print(b)
+print(f"{a}\n{b}")
