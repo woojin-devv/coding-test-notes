@@ -1,12 +1,17 @@
 a, b, c, d = map(int, input().split())
 
-# Please write your code here.
+elapsed_time = 0
+hour, mins = a, b
 
-if b < d:
-    h = (c - a) * 60
-    m = d - b
-else:
-    h = (c - a - 1) * 60
-    m = (60 - b) + d
+while True:
+    if hour == c and mins == d:
+        break
+    
+    elapsed_time += 1
+    mins += 1
 
-print(h+m) 
+    if mins == 60:
+        hour += 1
+        mins = 0
+
+print(elapsed_time)
