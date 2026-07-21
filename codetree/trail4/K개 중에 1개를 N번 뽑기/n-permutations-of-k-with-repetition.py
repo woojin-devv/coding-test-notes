@@ -1,21 +1,17 @@
-K, N = map(int, input().split())
-answer = []
+k, n = map(int, input().split())
 
-def print_answer():
-    for elem in answer:
-        print(elem, end=" ")
-    print()
+def print_answer(arr):
+    print(*arr)
 
-def choose(curr_num, K):
-    if curr_num == N + 1:
-        print_answer()
-        return
+def backtracking(start, temp):
 
-    for i in range(1, K + 1):
-        answer.append(i)
-        choose(curr_num + 1, K)
-        answer.pop()
-
-    return
-
-choose(1, K)
+    if len(temp) == n:
+        print_answer(temp)
+        return 
+    
+    for i in range(1, k+1):
+        temp.append(i)
+        backtracking(i, temp)
+        temp.pop()
+        
+backtracking(1, [])
