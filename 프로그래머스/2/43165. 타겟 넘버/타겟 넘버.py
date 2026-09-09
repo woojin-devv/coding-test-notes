@@ -1,17 +1,16 @@
 def solution(numbers, target):
     answer = 0
     
-    def dfs(total, idx):
+    def dfs(idx, curr):
         nonlocal answer
-        # 종료조건 
+        
         if idx == len(numbers):
-            if total == target:
+            if curr == target:
                 answer += 1
-            return 
-        dfs(total + numbers[idx], idx+1)
-
-        dfs(total - numbers[idx], idx+1)
-
+            return
+        
+        dfs(idx + 1, curr + numbers[idx])
+        dfs(idx + 1, curr - numbers[idx])
+        
     dfs(0, 0)
-    
     return answer
