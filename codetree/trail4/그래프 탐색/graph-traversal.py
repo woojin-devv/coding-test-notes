@@ -1,25 +1,40 @@
+from collections import deque
+
 n, m = map(int, input().split())
 edges = [tuple(map(int, input().split())) for _ in range(m)]
-visited = [False] * (n + 1)
-# n = 정점, m = 간선
-# 인접 행렬 초기화 
-cost = [[0] * (n+1) for _ in range(n+1)]
-vc = 0
-# 인접 행렬에 간선 연결 
-for i, j in edges:
-    cost[i][j] = 1
-    cost[j][i] = 1
+# q 초기화 
+q = deque()
 
-visited[1] = True
+# 인접 행렬 크기 초기화 
+vertexs = [[0] * n for i in range(n)]
 
-def dfs(v):
-    global vc
+# 노드 방문한 구간 초기화 
+visited = [False] * n
 
-    for curr_v in range(1, n+1):
-        if cost[v][curr_v] and not visited[curr_v]:
-            visited[curr_v] = True
-            dfs(curr_v)
-            vc += 1
+answer = 0
 
-dfs(1)
-print(vc)
+# edges -> vertex에 대한 인접행렬로 치환 
+for a, b in edges:
+    a -= 1
+    b -= 1
+
+    vertexs[a][b] = 1
+    vertexs[b][a] = 1
+
+def bfs(start):
+    global answer
+    q.append(start)
+    visited[start] = True
+
+    while q:
+        node = q.popleft()
+
+        for i in range(len(vertexs)):
+            if not visited[i] and vertexs[i][node] == 1:
+                visited[i] = True
+                q.append(i)
+                answer += 1
+    
+bfs(0)
+
+print(answer)
