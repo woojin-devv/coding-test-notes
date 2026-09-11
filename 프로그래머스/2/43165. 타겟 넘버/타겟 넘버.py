@@ -7,7 +7,7 @@ def solution(numbers, target):
         if idx == len(numbers):
             if curr == target:
                 answer += 1
-            return
+            return 
         
         dfs(idx + 1, curr + numbers[idx])
         dfs(idx + 1, curr - numbers[idx])
