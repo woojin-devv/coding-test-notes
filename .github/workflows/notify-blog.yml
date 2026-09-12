@@ -1,0 +1,25 @@
+name: Notify blog of coding test updates
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - 'codetree/**'
+      - '프로그래머스/**'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  notify:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Trigger blog deployment
+        env:
+          GH_TOKEN: ${{ secrets.BLOG_DEPLOY_TOKEN }}
+        run: >-
+          gh api --method POST
+          repos/woojin-devv/woojin-devv.github.io/dispatches
+          -f event_type=coding-tests-updated
+          -f "client_payload[source_sha]=$GITHUB_SHA"
