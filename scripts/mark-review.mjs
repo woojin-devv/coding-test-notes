@@ -62,8 +62,34 @@ const readmePath = matches[0]
 const problemDirectory = path.dirname(readmePath)
 const reviewPath = path.join(problemDirectory, 'review.json')
 const relativeReadmePath = path.relative(projectRoot, readmePath)
+const relativeProblemDirectory = path.relative(projectRoot, problemDirectory)
 const rawHeading = readFileSync(readmePath, 'utf8').match(/^#\s+(.+)$/m)?.[1] || path.basename(problemDirectory)
-const heading = rawHeading.replace(/^\[[^\]]+\]\s*/, '').replace(/\s+-\s+\d+\s*$/, '')
+const heading = (rawHeading.match(/^\[(.*)\]\(https?:\/\/[^)]+\)$/)?.[1] || rawHeading)
+  .replace(/^\[[^\]]+\]\s*/, '')
+  .replace(/\s+-\s+\d+\s*$/, '')
+const solutionExtensions = new Set(['.c', '.cc', '.cpp', '.cs', '.go', '.java', '.js', '.kt', '.php', '.py', '.rb', '.rs', '.sql', '.swift', '.ts'])
+
+const getSubmittedReviews = () => {
+  const output = execFileSync(
+    'git',
+    ['-c', 'core.quotepath=false', '-C', projectRoot, 'log', '--reverse', '--format=@@%H\t%aI', '--name-only', '--', relativeProblemDirectory],
+    { encoding: 'utf8' },
+  )
+  const commits = new Map()
+  let currentCommit = ''
+  let currentDate = ''
+
+  output.split('\n').forEach((line) => {
+    if (line.startsWith('@@')) {
+      ;[currentCommit, currentDate] = line.slice(2).split('\t')
+      return
+    }
+
+    if (solutionExtensions.has(path.extname(line).toLowerCase())) commits.set(currentCommit, currentDate)
+  })
+
+  return [...commits.values()].map((date, index) => ({ round: index + 1, date: date.slice(0, 10) }))
+}
 
 const getFirstSolvedDate = () => {
   const dates = execFileSync(
@@ -75,20 +101,26 @@ const getFirstSolvedDate = () => {
   return dates[0]?.slice(0, 10) || reviewDate
 }
 
+const submittedReviews = getSubmittedReviews()
 const current = existsSync(reviewPath)
   ? JSON.parse(readFileSync(reviewPath, 'utf8'))
-  : { problemId: query, reviews: [{ round: 1, date: getFirstSolvedDate() }] }
+  : { problemId: query, reviews: submittedReviews.length > 0 ? submittedReviews : [{ round: 1, date: getFirstSolvedDate() }] }
 
 if (!Array.isArray(current.reviews)) {
   console.error(`${path.relative(projectRoot, reviewPath)}의 reviews 형식이 올바르지 않습니다.`)
   process.exit(1)
 }
 
-const lastRound = current.reviews.reduce((max, review) => Math.max(max, Number(review.round) || 0), 0)
+const currentByRound = new Map(current.reviews.map((review) => [Number(review.round), review]))
+const knownRound = Math.max(submittedReviews.length, ...currentByRound.keys(), 1)
+const reviews = Array.from({ length: knownRound }, (_, index) =>
+  currentByRound.get(index + 1) || submittedReviews[index]
+).filter(Boolean)
+const lastRound = Math.max(1, ...reviews.map((review) => Number(review.round) || 0))
 const nextReview = { round: lastRound + 1, date: reviewDate }
 const payload = {
   problemId: String(current.problemId || query),
-  reviews: [...current.reviews, nextReview],
+  reviews: [...reviews, nextReview],
 }
 
 if (!isDryRun) writeFileSync(reviewPath, `${JSON.stringify(payload, null, 2)}\n`)
