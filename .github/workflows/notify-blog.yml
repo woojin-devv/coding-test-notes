@@ -6,6 +6,7 @@ on:
     paths:
       - 'codetree/**'
       - '프로그래머스/**'
+      - '백준/**'
   workflow_dispatch:
 
 permissions:

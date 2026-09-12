@@ -1,0 +1,7 @@
+{
+  "name": "coding-test-notes",
+  "private": true,
+  "scripts": {
+    "review": "node scripts/mark-review.mjs"
+  }
+}
