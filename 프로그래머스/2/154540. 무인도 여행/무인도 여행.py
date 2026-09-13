@@ -1,58 +1,49 @@
 from collections import deque
-
 def solution(maps):
-    grid = []
-    
-    for i in range(len(maps)):
-        grid.append(list(maps[i]))
-    
-    answers = []
+    answer = []
     q = deque()
-    visited = [[False] * len(maps[0]) for _ in range(len(maps))]
-    
-    
     dxs = [-1, 1, 0, 0]
     dys = [0, 0, -1, 1]
     
-    def in_range(x, y):
-        return 0 <= x < len(grid) and 0 <= y < len(grid[0])
+    grid = [list(el) for el in maps]
+    visited = [[False] * len(grid[0]) for _ in range(len(grid))]
     
-    def bfs(start):
-        temp = start
+    def bfs(curr):
         
         while q:
-            x, y = q.popleft()
+            x, y= q.popleft()
             
             for dx, dy in zip(dxs, dys):
                 nx = x + dx
                 ny = y + dy 
                 
-                if (
-                in_range(nx, ny)
-                and not visited[nx][ny]
-                and grid[nx][ny] != 'X'
-                ):
-                    q.append((nx, ny))
-                    visited[nx][ny] = True
+                if (0 <= nx < len(grid)
+                    and 0 <= ny < len(grid[0])
+                    and not visited[nx][ny]
+                    and grid[nx][ny] != 'X'):
                     
-                    temp += int(grid[nx][ny])
-        return temp
+                    visited[nx][ny] = True
+                    q.append((nx, ny))
+                    curr += int(grid[nx][ny])
+        return curr
+                    
     
     for i in range(len(grid)):
         for j in range(len(grid[0])):
-            if not visited[i][j] and grid[i][j] != 'X':
-    
+            if (
+            not visited[i][j] 
+            and grid[i][j] != 'X'
+            ):
                 visited[i][j] = True
                 q.append((i, j))
-                start = int(grid[i][j])
-                answer = bfs(start)
+                curr = int(grid[i][j])
                 
-                if answer != 0:
-                    answers.append(answer)
-    
-    answers.sort()
-    
-    if len(answers) == 0:
-        answers.append(-1)
+                temp = bfs(curr)
                 
-    return answers
+                answer.append(temp)
+                
+    if len(answer) == 0:
+        answer.append(-1)
+    answer.sort()
+
+    return answer

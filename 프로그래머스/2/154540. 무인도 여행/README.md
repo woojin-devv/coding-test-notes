@@ -1,10 +1,10 @@
 # [level 2] 무인도 여행 - 154540 
 
-[문제 링크](https://school.programmers.co.kr/learn/courses/30/lessons/154540) 
+[문제 링크](https://school.programmers.co.kr/learn/courses/30/lessons/154540?utm_source=chatgpt.com) 
 
 ### 성능 요약
 
-메모리: 11.7 MB, 시간: 8.99 ms
+메모리: 11.5 MB, 시간: 7.81 ms
 
 ### 구분
 
@@ -16,7 +16,7 @@
 
 ### 제출 일자
 
-2026년 09월 12일 11:15:26
+2026년 09월 13일 18:03:29
 
 ### 문제 설명
 
