@@ -1,17 +1,18 @@
 n, m = map(int, input().split())
+words = dict()
+numbers = dict()
 
-mapping = {}
+start = 1
+for _ in range(n):
+    k = input()
+    words[k] = start
+    numbers[start] = k
+    start += 1
 
-for index in range(1, n + 1):
-    word = input().strip()
-
-    mapping[index] = word
-    mapping[word] = index
 
 for _ in range(m):
-    query = input().strip()
-
-    if query.isdigit():
-        query = int(query)
-
-    print(mapping[query])
+    find = input()
+    if find.isdigit():
+        print(numbers[int(find)])
+    else:
+        print(words[find])
