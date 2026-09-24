@@ -1,0 +1,3 @@
+SELECT LEVEL - 1
+       FROM DUAL 
+       CONNECT BY LEVEL <= 24;
